@@ -1,0 +1,9 @@
+/* @import 'tailwindcss' */
+
+
+.side_box{
+    background: #151945;
+    height: 90vh;
+    width: 4rem;
+    border-radius: 4rem;
+}
