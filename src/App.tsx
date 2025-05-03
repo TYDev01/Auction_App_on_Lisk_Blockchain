@@ -2,8 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
+import Home from './components/Home'
 
 
 function App() {
@@ -11,8 +10,7 @@ function App() {
 
   return (
     <>
-    <Navbar />
-    <Sidebar />
+    <Home />
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

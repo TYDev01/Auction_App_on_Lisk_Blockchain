@@ -1,0 +1,11 @@
+
+
+.container{
+    padding: 80px;
+    background-color: green !important;
+}
+
+.flexm{
+    display: flex;
+    align-items: center;
+}
