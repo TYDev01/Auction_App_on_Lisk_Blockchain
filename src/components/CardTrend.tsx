@@ -1,8 +1,8 @@
 import nft6 from '../assets/images/nft6.webp';
 import nft7 from '../assets/images/nft7.webp';
 import nft1 from '../assets/images/nft1.jpeg'
-import nft2 from '../assets/images/nft2.jpg'
-import nft3 from '../assets/images/nft3.png'
+// import nft2 from '../assets/images/nft2.jpg'
+// import nft3 from '../assets/images/nft3.png'
 
 // Type definition for NFT objects
 interface NFT {
@@ -36,7 +36,7 @@ const CardTrend: React.FC = () => {
             alt={nft.name} 
           />
           <div className={`absolute inset-0 ${nft.id % 2 === 0 ? 'backdrop-blur-none cursor-pointer' : 'backdrop-grayscale-0 hover:backdrop-grayscale cursor-pointer'}`}></div>
-          <div className="absolute bottom-4 left-4 bg-white/80 px-3 py-1 rounded-lg font-medium">
+          <div className="absolute bottom-4 left-4 bg-blue-600/80 px-3 py-1 rounded-lg font-medium">
             ${nft.price.toLocaleString()}
           </div>
           <div className="absolute top-4 right-4 bg-black/60 text-white px-2 py-1 rounded text-sm">

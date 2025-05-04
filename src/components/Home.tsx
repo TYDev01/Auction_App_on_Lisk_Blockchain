@@ -1,3 +1,4 @@
+import Bids from "./Bids";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import TrendingCards from "./TrendingCards";
