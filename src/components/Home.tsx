@@ -1,4 +1,3 @@
-import Bids from "./Bids";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import TrendingCards from "./TrendingCards";
@@ -13,12 +12,12 @@ export default function Home(){
                 <Navbar />
             </div>
             <div className="container">
-                <div className="contents">
-                        <TrendingCards />
-                    </div>
                 <div className="flexm">
                     <div className="sidebar">
                         <Sidebar />
+                    </div>
+                    <div className="contents">
+                        <TrendingCards />
                     </div>
                 </div>
 

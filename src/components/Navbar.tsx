@@ -1,6 +1,7 @@
 import { IoWalletOutline } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import { BrowserProvider } from "ethers";
+import { useNavigate } from "react-router-dom";
 
 declare global {
   interface Window {
@@ -11,6 +12,7 @@ declare global {
 export default function Navbar() {
   const [isConnected, setIsConnected] = useState(false);
   const [walletAddress, setWalletAddress] = useState("");
+  const navigate = useNavigate();
 
   // Check wallet connection and set up listeners
   useEffect(() => {
@@ -72,11 +74,22 @@ export default function Navbar() {
     }
   };
 
+  const handleCreateAuction = () => {
+    if (!isConnected) {
+      alert("Please connect your wallet first!");
+      return;
+    }
+    navigate("/create-auction");
+  };
+
   return (
     <div className="flex justify-end">
-      <a className="cursor-pointer flex-initial p-3 rounded-xl text-center bg-gradient-to-r from-purple-500 to-purple-700 text-gray-100 font-mono order-1 m-1 hover:from-purple-600 hover:to-purple-800 transition-all">
+      <button 
+        onClick={handleCreateAuction}
+        className="cursor-pointer flex-initial p-3 rounded-xl text-center bg-gradient-to-r from-purple-500 to-purple-700 text-gray-100 font-mono order-1 m-1 hover:from-purple-600 hover:to-purple-800 transition-all"
+      >
         create auction
-      </a>
+      </button>
       <button 
         onClick={connectWallet}
         className="flex cursor-pointer items-center justify-center gap-2 flex-initial p-3 rounded-xl text-center bg-gradient-to-r from-purple-500 to-purple-700 text-gray-100 font-mono order-2 m-1 hover:from-purple-600 hover:to-purple-800 transition-all"
